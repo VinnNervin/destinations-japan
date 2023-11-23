@@ -4,26 +4,6 @@
     --t4s: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --t6s: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --t8s: all .8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-}
-
-html {
-    scroll-behavior: smooth;
-    background-color: #0F2C41;
-}
-
-html::-Webkit-Scrollbar {
-    Width: 0;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
 }
 
 img {
@@ -55,22 +35,17 @@ nav ul {
     color: white;
 }
 
-a {
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 500;
+nav ul li {
+    transition: var(--t2s);
 }
 
 nav ul li:hover {
     text-decoration: underline;
     transform: scale(1.1);
-    transition: var(--t2s);
 }
 
 nav button:hover {
     transform: scale(1.1);
-    transition: var(--t4s);
 }
 
 nav button {
@@ -81,10 +56,11 @@ nav button {
     background-color: transparent;
     border: 2px solid white;
     padding: 4px;
+    transition: var(--t4s);
 }
 
-.landing {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.227) 20%, rgba(255, 255, 255, 0) 80%), url("img/japan.jpg");
+.home {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.227) 20%, rgba(255, 255, 255, 0) 80%), url("../img/japan.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,39 +73,46 @@ nav button {
     background-color: red;
 }
 
-.landing h1 {
+.home h1 {
     font-size: 4rem;
     color: white;
     margin-left: 4rem;
 }
 
-.landing p {
+.home p {
     color: white;
     font-size: 1.5rem;
     margin-left: 4.2rem;
 }
 
 
-.landing button {
+.home button {
     color: white;
     font-size: 1.5rem;
     margin: 10px 0 0 4.2rem;
     background-color: transparent;
     border: 2px solid white;
     padding: 5px;
+    transition: var(--t4s);
 }
 
-.landing button:hover {
+.home button:hover {
     transform: scale(1.1);
-    transition: var(--t4s);
+}
+
+a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 /* ------------------------------------ */
 
 
 /* --------------------------- */
-.article-about {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.736) 20%, rgba(255, 255, 255, 0) 80%), url("img/japan01.jpg");
+.about-japan {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.736) 20%, rgba(255, 255, 255, 0) 80%), url("../img/japan01.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,20 +121,19 @@ nav button {
     align-items: center;
 }
 
-.article-about .about {
+.about-japan .about {
     margin-left: 4rem;
     color: rgb(255, 255, 255);
     /* background-color: red; */
-    width: 40%;
+    width: 40vw;
     border: 5px solid rgb(247, 247, 247);
     padding: 10px;
     backdrop-filter: blur(10px);
+    transition: var(--t8s);
 }
 
-.article-about .about:hover {
+.about-japan .about:hover {
     transform: scale(1.02);
-    transition: var(--t8s);
-
 }
 
 .about h2 {
@@ -166,7 +148,7 @@ nav button {
 
 /* ------------------------------------ */
 
-.destination {
+.destinations {
     height: auto;
     /* background: linear-gradient(to right, rgba(0, 0, 0, 0.736) 20%, rgba(0, 0, 0, 0.7) 80%), url("img/japan02.jpg"); */
     /* background-color: #052641 #223545; */
@@ -177,22 +159,22 @@ background-size: cover; */
     padding-top: 10vh;
 }
 
-.destination p {
+.destinations p {
     color: white;
     font-size: 5rem;
     font-weight: bold;
     margin: 0 0 8vh 30px;
 }
 
-.destinations {
+.destination {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding: 0 0 0vh 2vw;
     margin-bottom: 8vh;
     border-bottom: 2px solid white;
 }
 
-.destinations .img {
+.destination .img {
     width: 50%;
     height: max-content;
     overflow: hidden;
@@ -200,26 +182,27 @@ background-size: cover; */
 
 .img img {
     width: 100%;
+    transition: var(--t2s);
 }
 
 .img:hover img {
     transform: scale(1.05);
     cursor: pointer;
-    transition: var(--t2s);
 }
 
-.destinations .information {
+.destination .information {
     width: 40%;
     /* background-color: red; */
-    margin-left: 40px;
+    margin-left: 70px;
+    margin-right: 8vw;
     color: white;
 }
 
-.destinations .information h3 {
+.destination .information h3 {
     font-size: 4rem;
 }
 
-.destinations .information p {
+.destination .information p {
     font-size: 2rem;
     padding: 1rem;
 }
